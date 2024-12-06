@@ -17,7 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 
+from django.conf import settings
+from django.conf.urls.static import static
+
 urlpatterns = [
     path('admin/', admin.site.urls),#change this admin when doing your project
     path('api/',include('userapps.urls'))#its this api thats the first link to the other page
-]
+]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
