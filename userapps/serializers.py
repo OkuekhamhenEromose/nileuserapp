@@ -21,7 +21,7 @@ class RegistrationSerializer(serializers.ModelSerializer):
     email = serializers.EmailField(write_only=True)
     class Meta:
         model = Profile
-        fields = ['fullname','username','email','password1','password2','gender','phone','profile']
+        fields = ['fullname','username','email','password1','password2','gender','phone','profile_pix']
     def validate(self,data):
         if data['password1'] != data['password2']:
             raise serializers.ValidationError('password does not match')
