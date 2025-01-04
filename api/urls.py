@@ -23,4 +23,4 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),#change this admin when doing your project
     path('api/',include('userapps.urls'))#its this api thats the first link to the other page
-]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)#for profile pics to display

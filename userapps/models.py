@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 # Create your models here.
 
 GENDER = (
-    ('M', 'Male'),
+    ('M', 'Male'),# first one is for backend while the other one is for the frontend
     ('F', 'Female'),
 )
 class Profile(models.Model):
